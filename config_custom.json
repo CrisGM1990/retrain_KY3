@@ -1,0 +1,33 @@
+{
+    "model" : {
+        "input_size":       416,
+        "grid_size":        13,
+        "true_box_buffer":  10,
+        "iou_threshold":    0.5,  
+        "nms_threshold":    0.3
+    },
+    "config_path" : {
+        "labels":           "models/custom/labels.txt",
+        "anchors":          "models/custom/anchors.txt",
+        "arch_plotname":    ""
+    },
+    "train": {
+        "out_model_name":   "out_model/",
+        "image_folder":     "train_data/images/",
+        "annot_folder":     "train_data/labels/",
+        "batch_size":       16,
+        "learning_rate":    1e-4,
+        "num_epochs":       20,
+        "object_scale":     5.0 ,
+        "no_object_scale":  1.0,
+        "coord_scale":      1.0,
+        "class_scale":      1.0,
+        "verbose":          1
+    },
+
+    "valid": {
+        "image_folder":     "test_data/images/",
+        "annot_folder":     "test_data/labels/",
+        "pred_folder":      "test_data/pred/"
+    }
+}
